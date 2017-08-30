@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:83:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\cate\topcate.html";i:1503990470;s:84:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\common\header.html";i:1503926488;s:82:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\common\left.html";i:1503988231;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:84:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\common\header.html";i:1503926488;s:82:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\common\left.html";i:1504075714;}*/ ?>
 <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
@@ -64,6 +64,40 @@
                                     <span class="menu-text">
                                         添加顶级分类                                    </span>
 
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-gift"></i>
+                <span class="menu-text">商品管理</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo url('Goods/index'); ?>">
+                                    <span class="menu-text">
+                                        商品列表                                    </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-picture-o"></i>
+                <span class="menu-text">图片管理</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo url('Picture/index'); ?>">
+                                    <span class="menu-text">
+                                        图片列表                                    </span>
                         <i class="menu-expand"></i>
                     </a>
                 </li>

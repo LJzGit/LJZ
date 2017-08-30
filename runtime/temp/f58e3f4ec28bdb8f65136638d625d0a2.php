@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\cate\list.html";i:1504008657;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\cate\list.html";i:1504055593;}*/ ?>
 <?php echo widget('Blog/header'); ?>
 
 <div class="main-container container-fluid">
@@ -23,7 +23,7 @@
             <div class="page-body">
 
                 <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '<?php echo url('Admin/add'); ?>'"><i class="fa fa-plus"></i>
+                        onClick="javascript:window.location.href = '<?php echo url('Cate/add'); ?>'"><i class="fa fa-plus"></i>
                     Add
                 </button>
                 <div class="row">

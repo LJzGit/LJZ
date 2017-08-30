@@ -57,7 +57,6 @@ class Cate extends Model{
      *添加子分类
      */
     static public function addSonCate($data){
-
         $arr=self::getCateById($data['id']);
         if(!$arr ||empty($arr)){
             return false;
@@ -71,6 +70,7 @@ class Cate extends Model{
            'name'=>$name,
            'level'=>$level
        ];
+
        //添加
         $id=db('cate')->insertGetId($param);
         if(!$id){
@@ -110,4 +110,15 @@ class Cate extends Model{
        $res=db('cate')->update($arr);
        return $res?true:false;
    }
+
+    /**
+     * 获取分类
+     */
+    static public function getCate(){
+        $cate=db('cate')->field('id,name,level')->order('path')->select();
+        foreach ($cate as $key=>$val){
+            $cate[$key]['name'] = str_repeat('—',$val['level']).$val['name'];
+        }
+        return $cate;
+    }
 }

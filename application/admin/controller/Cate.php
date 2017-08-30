@@ -8,6 +8,7 @@
 namespace app\admin\controller;
 use app\admin\model\Cate as CateModel;
 use app\admin\widget\Blog;
+use app\admin\model\Goods;
 
 class Cate extends Blog{
     /**
@@ -112,6 +113,34 @@ class Cate extends Blog{
             return $this->success('修改成功',url('index'));
         }else{
             return $this->error('修改失败');
+        }
+    }
+    public function add(){
+
+        $data=CateModel::getCate();
+        $this->assign('data',$data);
+        return $this->fetch();
+    }
+    /**
+     * add
+     */
+    public function addCate(){
+        $arr=[
+            'id'=>input('cate_id'),
+            'name'=>input('name'),
+        ];
+        if($arr['id']==0){
+            self::addTopCate();
+        }
+        $validate=validate('Cate');
+        if(!$validate->scene('add')->check($arr)){
+            return $this->error($validate->getError());
+        }
+        $res=CateModel::addSonCate($arr);
+        if($res){
+            return $this->success('添加成功',url('index'));
+        }else{
+            return $this->error('添加失败');
         }
     }
 }

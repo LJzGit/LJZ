@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-08-29 20:28:40
+Date: 2017-08-30 22:19:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -62,7 +62,7 @@ CREATE TABLE `yimi_cate` (
   `path` varchar(255) NOT NULL,
   `level` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yimi_cate
@@ -77,7 +77,10 @@ INSERT INTO `yimi_cate` VALUES ('7', '鱼类', '3', '3,7', '1');
 INSERT INTO `yimi_cate` VALUES ('8', '虾类', '3', '3,8', '1');
 INSERT INTO `yimi_cate` VALUES ('9', '小黄鱼', '7', '3,7,9', '2');
 INSERT INTO `yimi_cate` VALUES ('10', '小龙虾', '8', '3,8,10', '2');
+INSERT INTO `yimi_cate` VALUES ('41', '电器', '0', '41', '0');
 INSERT INTO `yimi_cate` VALUES ('36', '香蕉', '1', '1,36', '1');
+INSERT INTO `yimi_cate` VALUES ('42', '家用电器', '41', '41,42', '1');
+INSERT INTO `yimi_cate` VALUES ('43', '电视', '42', '41,42,43', '2');
 
 -- ----------------------------
 -- Table structure for yimi_goods
@@ -99,11 +102,15 @@ CREATE TABLE `yimi_goods` (
   `is_up` tinyint(1) NOT NULL DEFAULT '1',
   `is_show` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`goods_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yimi_goods
 -- ----------------------------
+INSERT INTO `yimi_goods` VALUES ('5', '空调', '8400.00', '6900.00', '41', '300', '0', '热吗？', '8400', '<p>好空调</p>', '0', '1504091323', '1', '1');
+INSERT INTO `yimi_goods` VALUES ('2', '澳洲小龙虾', '300.00', '200.00', '10', '100', '0', '澳洲进口小龙虾，香甜可口', '300', '<p>好吃</p>', '0', '1504093757', '1', '1');
+INSERT INTO `yimi_goods` VALUES ('3', '枳', '4.00', '3.00', '4', '200', '0', '甜', '4', '<p>好吃啊</p>', '0', '1504093708', '1', '1');
+INSERT INTO `yimi_goods` VALUES ('4', '鲨鱼', '6000.00', '4000.00', '7', '5', '0', '温顺', '6000', '<p>大撒旦</p>', '0', '1504093746', '1', '1');
 
 -- ----------------------------
 -- Table structure for yimi_image
@@ -118,11 +125,15 @@ CREATE TABLE `yimi_image` (
   `img_s_url` varchar(255) NOT NULL,
   `is_face` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否首页',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yimi_image
 -- ----------------------------
+INSERT INTO `yimi_image` VALUES ('7', '4', '/uploads/20170830/65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/200_65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/120_65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/60_65f2cd1b9959adcbd52a73aa397231e6.jpg', '0');
+INSERT INTO `yimi_image` VALUES ('5', '2', '/uploads/20170830/eb952aeff8575c6dcc8b780ce7f865e0.jpg', '/uploads/20170830/200_eb952aeff8575c6dcc8b780ce7f865e0.jpg', '/uploads/20170830/120_eb952aeff8575c6dcc8b780ce7f865e0.jpg', '/uploads/20170830/60_eb952aeff8575c6dcc8b780ce7f865e0.jpg', '0');
+INSERT INTO `yimi_image` VALUES ('6', '3', '/uploads/20170830/a0cf7c8f27d117f686a279c1c7f0743f.jpg', '/uploads/20170830/200_a0cf7c8f27d117f686a279c1c7f0743f.jpg', '/uploads/20170830/120_a0cf7c8f27d117f686a279c1c7f0743f.jpg', '/uploads/20170830/60_a0cf7c8f27d117f686a279c1c7f0743f.jpg', '0');
+INSERT INTO `yimi_image` VALUES ('8', '4', '/uploads/20170830/94d9db6004628aa03cfeef4f5fd9b700.jpg', '/uploads/20170830/200_94d9db6004628aa03cfeef4f5fd9b700.jpg', '/uploads/20170830/120_94d9db6004628aa03cfeef4f5fd9b700.jpg', '/uploads/20170830/60_94d9db6004628aa03cfeef4f5fd9b700.jpg', '0');
 
 -- ----------------------------
 -- Table structure for yimi_item
@@ -179,13 +190,14 @@ CREATE TABLE `yimi_member` (
   `reg_time` int(11) NOT NULL,
   `point` int(11) NOT NULL,
   PRIMARY KEY (`member_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yimi_member
 -- ----------------------------
 INSERT INTO `yimi_member` VALUES ('1', 'qqq', '4d1ea1367acf0560c6716dd076a84d7f', '12345678901', '', '0', '', '0', '0');
-INSERT INTO `yimi_member` VALUES ('2', 'iop', '9272c6f1f7568ade07f84c80a6c90c69', '15080321110', '', '0', '', '0', '0');
+INSERT INTO `yimi_member` VALUES ('2', 'iop', '9272c6f1f7568ade07f84c80a6c90c69', '15080321111', '', '0', '', '0', '0');
+INSERT INTO `yimi_member` VALUES ('3', 'ljz', 'e10adc3949ba59abbe56e057f20f883e', '15080321110', '', '0', '', '0', '0');
 
 -- ----------------------------
 -- Table structure for yimi_order
