@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-08-30 22:19:22
+Date: 2017-08-31 14:34:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -125,15 +125,16 @@ CREATE TABLE `yimi_image` (
   `img_s_url` varchar(255) NOT NULL,
   `is_face` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否首页',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yimi_image
 -- ----------------------------
-INSERT INTO `yimi_image` VALUES ('7', '4', '/uploads/20170830/65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/200_65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/120_65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/60_65f2cd1b9959adcbd52a73aa397231e6.jpg', '0');
+INSERT INTO `yimi_image` VALUES ('7', '4', '/uploads/20170830/65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/200_65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/120_65f2cd1b9959adcbd52a73aa397231e6.jpg', '/uploads/20170830/60_65f2cd1b9959adcbd52a73aa397231e6.jpg', '1');
 INSERT INTO `yimi_image` VALUES ('5', '2', '/uploads/20170830/eb952aeff8575c6dcc8b780ce7f865e0.jpg', '/uploads/20170830/200_eb952aeff8575c6dcc8b780ce7f865e0.jpg', '/uploads/20170830/120_eb952aeff8575c6dcc8b780ce7f865e0.jpg', '/uploads/20170830/60_eb952aeff8575c6dcc8b780ce7f865e0.jpg', '0');
 INSERT INTO `yimi_image` VALUES ('6', '3', '/uploads/20170830/a0cf7c8f27d117f686a279c1c7f0743f.jpg', '/uploads/20170830/200_a0cf7c8f27d117f686a279c1c7f0743f.jpg', '/uploads/20170830/120_a0cf7c8f27d117f686a279c1c7f0743f.jpg', '/uploads/20170830/60_a0cf7c8f27d117f686a279c1c7f0743f.jpg', '0');
 INSERT INTO `yimi_image` VALUES ('8', '4', '/uploads/20170830/94d9db6004628aa03cfeef4f5fd9b700.jpg', '/uploads/20170830/200_94d9db6004628aa03cfeef4f5fd9b700.jpg', '/uploads/20170830/120_94d9db6004628aa03cfeef4f5fd9b700.jpg', '/uploads/20170830/60_94d9db6004628aa03cfeef4f5fd9b700.jpg', '0');
+INSERT INTO `yimi_image` VALUES ('9', '5', '/uploads/20170831/db3405ddeda119bf840dabd328895c88.jpg', '/uploads/20170831/200_db3405ddeda119bf840dabd328895c88.jpg', '/uploads/20170831/120_db3405ddeda119bf840dabd328895c88.jpg', '/uploads/20170831/60_db3405ddeda119bf840dabd328895c88.jpg', '0');
 
 -- ----------------------------
 -- Table structure for yimi_item

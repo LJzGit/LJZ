@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\picture\list.html";i:1504096444;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\picture\list.html";i:1504160514;}*/ ?>
 <?php echo widget('Blog/header'); ?>
 
 <div class="main-container container-fluid">
@@ -23,7 +23,7 @@
             <div class="page-body">
 
                 <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '<?php echo url('Admin/add'); ?>'"><i class="fa fa-plus"></i>
+                        onClick="javascript:window.location.href = '<?php echo url('Picture/addChoose'); ?>'"><i class="fa fa-plus"></i>
                     Add
                 </button>
                 <div class="row">
@@ -52,6 +52,10 @@
                                                     <i class="fa fa-cogs"></i> 管理
                                                 </a>
 
+                                                <a href="<?php echo url('Picture/del',['id'=>$v['id']]); ?>"
+                                                   class="btn btn-danger btn-sm shiny">
+                                                    <i class="fa fa-trash-o"></i> 删除
+                                                </a>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>

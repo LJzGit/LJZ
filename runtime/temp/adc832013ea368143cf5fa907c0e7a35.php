@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\picture\edit.html";i:1504099454;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/admin\view\picture\edit.html";i:1504161219;}*/ ?>
 <?php echo widget('Blog/header'); ?>
 
 <div class="main-container container-fluid">
@@ -25,10 +25,7 @@
             <!-- Page Body -->
             <div class="page-body">
 
-                <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '<?php echo url('Admin/add'); ?>'"><i class="fa fa-plus"></i>
-                    Add
-                </button>
+                
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
                         <div class="widget">
@@ -40,24 +37,24 @@
                                             <th class="text-center">ID</th>
                                             <th class="text-center">商品名称</th>
                                             <th class="text-center">缩略图</th>
-                                            <th class="text-center">操作</th>
+                                            <th class="text-center">是否封面</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <?php foreach($data as $val): ?>
                                         <tr>
-                                            <?php foreach($val as $v): ?>
-                                            <td align="center"><?php echo $val.$v['goods_id']; ?></td>
-                                            <td align="center"><?php echo $v['goods_name']; ?></td>
-                                            <td align="center"><img src="<?php echo $v['img_url']; ?>" width="120" alt=""></td>
+
+                                            <td align="center"><?php echo $val['goods_id']; ?></td>
+                                            <td align="center"><?php echo $val['goods_name']; ?></td>
+                                            <td align="center"><img src="<?php echo $val['img_url']; ?>" width="120" alt=""></td>
                                             <td align="center">
-                                                <a href="<?php echo url('Picture/edit',['id'=>1]); ?>"
+                                                <a href="<?php echo url('Picture/is_face',['id'=>$val['id'],'goods_id'=>$val['goods_id']]); ?>"
                                                    class="btn btn-primary btn-sm shiny">
-                                                    <i class="fa fa-cogs"></i> 管理
+                                                    <i class="fa fa-refresh"></i> √/×
                                                 </a>
 
                                             </td>
-                                            <?php endforeach; ?>
+
                                         </tr>
                                         <?php endforeach; ?>
                                         </tbody>

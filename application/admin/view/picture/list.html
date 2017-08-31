@@ -22,7 +22,7 @@
             <div class="page-body">
 
                 <button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"
-                        onClick="javascript:window.location.href = '{:url(\'Admin/add\')}'"><i class="fa fa-plus"></i>
+                        onClick="javascript:window.location.href = '{:url(\'Picture/addChoose\')}'"><i class="fa fa-plus"></i>
                     Add
                 </button>
                 <div class="row">
@@ -51,6 +51,10 @@
                                                     <i class="fa fa-cogs"></i> 管理
                                                 </a>
 
+                                                <a href="{:url('Picture/del',['id'=>$v.id])}"
+                                                   class="btn btn-danger btn-sm shiny">
+                                                    <i class="fa fa-trash-o"></i> 删除
+                                                </a>
                                             </td>
                                         </tr>
                                         {/foreach}

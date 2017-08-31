@@ -71,17 +71,60 @@ class Picture extends Model{
         return $res?true:false;
     }
     /**
-     * 找图通过id
+     * 找图通过商品id
      */
     static public function getImageById($id){
 //        dump($id);exit;
         $map['g.goods_id']=$id;
         $data=db('image')
             ->alias('i')
-            ->field('i.img_url,i.goods_id,g.goods_name')
+            ->field('i.img_url,i.goods_id,g.goods_name,i.is_face,i.id')
             ->join('goods g','i.goods_id=g.goods_id','left')
             ->where($map)
             ->select();
         return $data;
+    }
+    /*
+     * 通过图片id找图片
+     */
+    static public function getImage($id){
+        $data=db('image')->find($id);
+        if($data['is_face']==0){
+            $data['is_face']=1;
+        }else{
+            $data['is_face']=0;
+        }
+        $data=db('image')->update($data);
+        return $data?true:false;
+    }
+    /**
+     * 通过图片id找商品id
+     */
+    static public function getGoodsId($goods_id){
+        $goods_id=input('goods_id');
+//        dump($goods_id);exit;
+//        $data=db('image')->field('is_face')->where(['goods_id'=>$goods_id])->select();
+        $data=db('image')->where(['goods_id'=>$goods_id])->update(['is_face'=>0]);
+        return true;
+    }
+
+    static public function getGoods2(){
+        $data=db('goods')
+            ->alias('g')
+            ->field('g.goods_id,g.goods_name,i.id,i.img_s_url')
+            ->join('image i','g.goods_id=i.goods_id','left')
+            ->paginate(3);
+
+        return $data;
+    }
+
+    static public function delede($id){
+        $data=db('image')->find($id);
+        @unlink('.'.$data['img_url']);
+        @unlink('.'.$data['img_b_url']);
+        @unlink('.'.$data['img_m_url']);
+        @unlink('.'.$data['img_s_url']);
+        $res=db('image')->delete($id);
+        return $res?true:false;
     }
 }
