@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>https://www.yimishiji.com/passport-login.html</title>
+    <link rel="icon" href="__STATIC__/index/__STATIC__/index/images/favicon.ico">
+    <link rel="stylesheet" href="__STATIC__/index/style/content.css" type="text/css">
+</head>
+<body>
+<div class="all">
+    <div class="bar"></div>
+    <header class="header">
+        <ul class="uu">
+            <li><img src="__STATIC__/index/images/logo.png" alt="">               </li>
+            <li class="rr">
+                <a class="dada">所有商品</a>
+                <ul class="da">
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                </ul>
+                <ul class="da1">
+                    <li class="xiao1">四时蔬菜</li>
+                    <li class="xiao1">四时蔬菜</li>
+                    <li class="xiao1">四时蔬菜</li>
+                    <li class="xiao1">四时蔬菜</li>
+                    <li class="xiao1">四时蔬菜</li>
+                    <li class="xiao1">四时蔬菜</li>
+                    <li class="xiao1">四时蔬菜</li>
+                    <li class="xiao1">四时蔬菜</li>
+                </ul>
+            </li>
+            <li class="rr">
+                <a class="dada"> 好事发生</a>
+                <ul class="da">
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                </ul>
+            </li>
+            <li class="rr">
+                <a class="dada">吃的主张</a>
+                <ul class="da">
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                    <li class="xiao">四时蔬菜</li>
+                </ul>
+            </li>
+            <li><input class="ss" placeholder="搜索你喜欢的" value="8424"><button class="search-button"></button></li>
+            <li>          <img id="sc" src="__STATIC__/index/images/shop-car.png" alt=""></li>
+            <li>   |      <img id="user" src="__STATIC__/index/images/user.png" alt=""></li>
+        </ul>
+    </header>
+    <aside class="contain">
+        <div class="lala">
+            <div class="left1">
+                {foreach $data as $v}
+                <img src="{$v.img_s_url}" >
+                {/foreach}
+            </div>
+            <div class="center1">
+                {foreach $data as $v}
+                <img src="{$v.img_b_url}" >
+                {/foreach}
+            </div>
+            <div class="like"><img src="__STATIC__/index/images/icon_like.png"   width="14" alt=""></div>
+            <div class="share"><img src="__STATIC__/index/images/icon_share.png" width="13" alt=""></div>
+            <div class="right1">
+                <p class="icon">瑞缘</p>
+                <p class="title">{$data0.goods_name}</p><div class="grade">4.9</div>
+                <p class="say"><u>83</u>个人评论</p>
+                <p class="cont">{$data0.desc}</p>
+                <p class="price">￥{$data0.sell_price}</p>
+                <div class="recommend">
+                    <div class="gift"><img src="__STATIC__/index/images/promoIcon2.png" width="20" alt=""></div>
+                    <div class="giftr">
+                        <span>新客首单满79元包邮，并送蒲烧烤鳗/去皮挪威鳕鱼块/带皮挪威鳕鱼块（三选一） </span>
+                        <div>
+                            <img src="__STATIC__/index/images/z4.jpg" width="20" style="position: relative;top: 5px;"  ><span style="color: #999">日式蒲烧烤鳗</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabl">
+                    <div class="tab_left"><p class="top">规格</p><p class="bot">195g/份</p></div>
+                    <div class="tab_cent"><p class="top">保存方式</p><p class="bot">冷鲜0-4℃</p></div>
+                    <div class="tab_right"><p class="top">保质期</p><p class="bot">18天</p></div>
+                </div>
+                <div class="shop_btn">
+                    <div class="jia">-</div>
+                    <div class="num">1</div>
+                    <div class="jian">+</div>
+                    <button>加入购物车</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="content-left">
+            <div class="jianyan">
+                <div class="jyleft">
+                    <span>检验报告</span>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="jyright">
+                    <span>做个选择</span>
+                    <div>
+                        <img src="__STATIC__/index/images/l8.jpg" width="60" height="60" alt="">
+                        <span style="position: absolute;left: 8px ;top:70px">无负面添加</span>
+                        <img src="__STATIC__/index/images/l14.jpg" width="60" height="60" alt="">
+                        <span style="position: absolute;left: 100px ;top:70px">优质产地</span>
+                        <img src="__STATIC__/index/images/l17.jpg" width="60" height="60" alt="">
+                        <span style="position: absolute;left: 175px ;top:70px">纯天然原料</span>
+                    </div>
+                </div>
+                <div class="jydown">
+                    <span>食材身份证</span>
+                    <div>
+                        <div>
+                            <span>制造者</span>
+                            <span>新疆凯瑞可食品科技有限公司</span><br><br>
+                            <span>搬运距离</span>
+                            <span>4096 km</span><br><br>
+                            <span>尝过这一味</span>
+                        </div>
+                        <div style="margin-left: 50px">
+                            <span>制造地点</span>
+                            <span>新疆巴音经济技术开发区</span><br><br>
+                            <span>运输旅程</span>
+                            <span>巴音郭楞...✈...上海</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div>{$data0.content}</div>
+                <!--<div>-->
+                    <!--<p>温馨提示：天气热容易发酸变质，喝不完请盖上盖子或包好后，尽快放入冰箱保存。如果已经沾染过唾液，请及时喝掉，不要久放。</p><br>-->
+                    <!--<p>乳香浓郁；半凝固形态，如同豆腐一样滑嫩。</p><br>-->
+                    <!--<img src="__STATIC__/index/images/nai1.jpg" width="650" height="433.33" alt=""><br><br>-->
+                    <!--<p>来自新疆巴音布鲁克大草原的优质奶源，纯鲜奶发酵，只含有鲜奶、糖与发酵所需的有益菌种。美味而安全，准妈妈、小朋友都能安心食用。</p><br>-->
+                    <!--<img src="__STATIC__/index/images/nai2.jpg" width="650" height="975" alt=""><br><br>-->
+                    <!--<img src="__STATIC__/index/images/nai3.jpg" width="650" height="433.33" alt=""><br><br>-->
+                    <!--<p>对于中国人来说，新鲜的牛奶很容易导致乳糖不耐受，比如拉肚子、腹胀等。这是因为成年中国人的消化系统中广泛缺乏乳糖酶，难以将牛奶中的双糖分解为人体能够吸收的单糖。而酸奶就能很好地解决这个问题。乳酸菌能够将乳糖分解为葡萄糖和半乳糖，不易引起腹胀不适。</p>-->
+                    <!--<br>-->
+                    <!--<img src="__STATIC__/index/images/nai4.jpg" width="650" height="433.33" alt=""><br><br>-->
+                    <!--<span>食物的背后</span>-->
+                    <!--<hr>-->
+                    <!--<br>-->
+                    <!--<p>瑞缘乳业的奶源来自以现代科学养殖方式放养于巴音布鲁克草原的荷斯坦奶牛，纯净安全无污染。</p><br>-->
+                    <!--<p>巴音布鲁克大草原是中国的第二大草原，也是中国最大的高山牧场，在蒙语中，「巴音布鲁克」意为丰富的泉水。它地处天山深处，群峰环抱，泉流密布，水草丰美，是新疆的牧业基地之一。</p><br>-->
+                    <!--<p>瑞缘乳业有志于通过积极研发科技含量高的乳产品，一方面帮助改善国民膳食营养结构，促进青少年增强体质，促进民族振兴和发展，另一方面通过科技创新，达到降耗环保，优化人类居住环境的远景目标。</p>-->
+                    <!--<br>-->
+                    <!--<span>评价： 4.9分 84人评分</span>-->
+                    <!--<hr>-->
+                    <!--<br>-->
+                    <!--<span>吃过的人都说</span>-->
+                    <!--<div style="margin-top: 20px">-->
+                        <!--<button class="eat-say">安全放心<span>2</span></button>-->
+                        <!--<button class="eat-say">配送神速<span>2</span></button>-->
+                        <!--<button class="eat-say">包装环保<span>1</span></button>-->
+                        <!--<button class="eat-say">很好吃<span>2</span></button>-->
+                        <!--<button class="eat-say">家人喜欢<span>2</span></button>-->
+                        <!--<button class="eat-say">还想再买<span>1</span></button>-->
+                    <!--</div>-->
+
+                    <!--<br>-->
+                    <!--<div>-->
+                        <!--<hr style="border: 1px solid #9d9d9d">-->
+                        <!--<br><br>-->
+                        <!--<p style="margin-left: 20px">暂无评论</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="content-right">
+            <span>品牌商家</span>
+            <div class="pinpai">
+                <br>
+                <span>瑞缘</span><br><br>
+                <p>新疆凯瑞可食品科技有限公司是瑞源乳业公司的全资子公司，瑞源乳业是农业产业化国家重点龙头企业、自治区扶贫龙头企业、知识产权示范基地、科技新兴企业，拥有7项发明专利，于2004年通过ISO9001:2000国际质量体系认证，是新疆设备最先进的乳制品生产企业之一。</p>
+                <br>
+                <button class="read-pinpai">读品牌</button><br>
+                <br>
+                <span>瑞缘的相关产品</span><br>
+                <hr>
+                <br>
+                <img src="__STATIC__/index/images/z0.jpg" width="150" height="150" style="border-radius: 60px" alt=""><br>
+                <span>梨城故事 原味酸奶 6</span><br>
+                <p>瑞缘</p>
+                <span>￥69.00</span><br><br><br><br>
+                <span>相关文章</span>
+                <hr>
+            </div>
+        </div>
+    </aside>
+{:widget('Base/footer')}

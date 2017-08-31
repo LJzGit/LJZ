@@ -7,8 +7,9 @@
  */
 namespace app\index\controller;
 
+use app\index\widget\Base;
 use think\Controller;
-class Index extends Controller{
+class Index extends Base {
 
     public function index(){
 

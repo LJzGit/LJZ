@@ -34,7 +34,7 @@ class Picture extends Blog{
         $data['goods_id']=$id;
         $data['img_m_url']=picModel::thumb($data['img_url'],120,120);
         $data['img_s_url']=picModel::thumb($data['img_url'],60,60);
-        $data['img_b_url']=picModel::thumb($data['img_url'],200,200);
+        $data['img_b_url']=picModel::thumb($data['img_url'],650,650);
         $add=picModel::addImage($data);
         if ($add) {
             return $this->success('添加成功', 'index');

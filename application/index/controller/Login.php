@@ -6,9 +6,10 @@
  * Time: 21:53
  */
 namespace app\index\controller;
+use app\index\widget\Base;
 use think\Controller;
 use app\index\model\Login as loginModel;
-class Login extends Controller{
+class Login extends Base {
 
     public function index(){
         return $this->fetch('yimi_login');
@@ -28,6 +29,9 @@ class Login extends Controller{
             }
             $arr=loginModel::getMember($data);
 
+            if($arr['is_lock']=='1'){
+                return $this->error('此帐号已被冻结');
+            }
             if(!$arr){
                 return $this->error('用户名或密码错误');
             }

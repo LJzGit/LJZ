@@ -1,11 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"D:\UPUPW\UPUPW_NP7.0\htdocs\yimi\public/../application/index\view\login\yimi_login.html";i:1504102261;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>https://www.yimishiji.com/passport-login.html</title>
     <link rel="icon" href="__STATIC__/index/images/favicon.ico">
-    <link rel="stylesheet" href="__STATIC__/index/style/login.css">
+    <link rel="stylesheet" href="__STATIC__/index/style/register.css">
 </head>
 <body>
 <div class="all">
@@ -22,20 +21,19 @@
         </ul>
     </header>
     <aside class="contain">
-        <form class="left" action="<?php echo url('Login/login'); ?>" method="post">
-            <sign class="login">登 录</sign>
-            <hr>
-            <dd class="woo">登录帐号</dd>
-            <input class="inp" type="text" placeholder=" 用户名/邮箱地址/手机号" name="username">
-            <dd class="woo">密码</dd>
-            <input class="inp" type="text" placeholder=" 填写密码" name="password"><br>
-            <input class="woo" type="checkbox">记住帐号 <br>
-            <button>登 录</button>
-            <dd class="wjmm"><d>忘记密码？</d></dd>
+        <form class="left" action="{:url('Register/regs')}" method="post">
+            <sign class="login">会 员 注 册</sign><br>
+            <span class="woo">手机号    </span><input class="inp" type="text" name="mobile" placeholder=" 请填写正确手机号"><br>
+            <span class="woo">密码      </span><input class="inp" type="password" name="password" placeholder=" 6-20个字符"><br>
+            <span class="woo">确认密码  </span><input class="inp" type="password" name="password2" placeholder=" 再次填写密码"><br>
+            <span class="woo">效验码    </span><input class="inpp" type="text" name="" placeholder=" 填写效验码"><img src="__STATIC__/index/images/xym.png"><u class="u1">看不清楚？换一个</u><br>
+            <span class="woo">验证码    </span><input class="inpp" type="text" name="code" placeholder=" 填写验证码"> <button class="button2">获取短信验证码</button><br>
+            <span class="woo">          <small>如未收到短信，请联络客服或拨打400-655-1212</small></span>
+            <input class="woo" type="checkbox">我已阅读并同意 <u class="u2">会员注册协议</u> 和 <u class="u2">隐私保护政策</u><br>
+            <button class="button1">注 册</button>
         </form>
         <div class="right">
-            <img id="photo" src="__STATIC__/index/images/bkg_tags.jpg" >
-            <dd class="wordd">我不是会员，<u>要加入。</u></dd>
+            <img id="photo" src="__STATIC__/index/images/vegetable.jpg" >
         </div>
     </aside>
     <footer class="final">
